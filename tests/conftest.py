@@ -10,7 +10,7 @@ def browser(request):
     if hasattr(request.node, "rep_call") and request.node.rep_call.failed:
         test_name = request.node.name
         driver.save_screenshot(f"screenshots/{test_name}.png")
-        print(f"\n📸 Скриншот сохранён: screenshots/{test_name}.png")
+        print(f"\n Скриншот сохранён: screenshots/{test_name}.png")
 
     driver.quit()
 
